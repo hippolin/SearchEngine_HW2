@@ -11,6 +11,7 @@ public class Page {
 	private String url = null;
 	private HashSet<String> inlinks = new HashSet<String>();
 	private HashSet<String> outlinks = new HashSet<String>();
+	private float pagerank = 0;
 	
 	public Page(String url) {
 		this.url = url;
@@ -46,5 +47,13 @@ public class Page {
 	
 	public void addOutLink(String outlink) {
 		outlinks.add(outlink);
+	}
+
+	public float getPagerank() {
+		return pagerank;
+	}
+
+	public void setPagerank(float pagerank) {
+		this.pagerank = pagerank;
 	}
 }
